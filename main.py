@@ -20,8 +20,12 @@ for position in starting_position:
 game_is_on = True
 while game_is_on:
     screen.update()
-    time.sleep(0.1)                       # Slow down 1 second
-    for seg in segment:
-        seg.forward(20)                     # Go forward each box by 20px
-        
+    time.sleep(0.1)                          # Slow down 1 second
+    for seg_num in range (len(segment)-1, 0, -1):
+        new_x = segment[seg_num - 1].xcor()               
+        new_y = segment[seg_num - 1].ycor() 
+        segment[seg_num].goto(new_x, new_y)         # Give axis values each time it moves it follows the first square                
+
+    segment[0].forward(20) 
+      
 screen.exitonclick()
