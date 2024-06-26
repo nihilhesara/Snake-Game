@@ -18,7 +18,7 @@ screen.onkey(snake.right, "Right")
 
 game_is_on = True
 while game_is_on:
-    screen.update()
+    screen.update()                          # Update screen in every move(show snake as a )
     time.sleep(0.1)                          # Slow down 1 second                
     snake.move()                             # Move method in Snake class
 
