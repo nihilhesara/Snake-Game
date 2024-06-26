@@ -39,10 +39,8 @@ while game_is_on:
         game_is_on = False
     
     # Detect collution with tail
-    for segments in snake.segment:
-        if segments == snake.head:
-            pass
-        elif snake.head.distance(segments) < 10:
+    for segments in snake.segment[1:]:
+        if snake.head.distance(segments) < 10:
             scoreboard.game_over()
             game_is_on = False
  
