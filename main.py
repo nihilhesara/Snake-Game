@@ -12,6 +12,7 @@ segment = []
 
 snake = Snake()                             # Create a snake object
 food = Food()                               # Create a food object
+
 screen.listen()
 screen.onkey(snake.up, "Up")
 screen.onkey(snake.down, "Down")
@@ -23,5 +24,8 @@ while game_is_on:
     screen.update()                          # Update screen in every move(show snake as a )
     time.sleep(0.1)                          # Slow down 1 second                
     snake.move()                             # Move method in Snake class
+
+    if snake.head.distance(food) < 15:
+        food.refresh()
 
 screen.exitonclick()
