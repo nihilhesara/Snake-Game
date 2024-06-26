@@ -13,15 +13,23 @@ class Snake:
         self.segment = []
         self.create_snake()
         self.head = self.segment[0]                 # To get the snake direction on key press
+        self.extend()
     
     def create_snake(self):
         # Create a 20px heigt and 60px width snake 
         for position in STRATING_POSITION:
-            new_segment = Turtle("square")
-            new_segment.color("white")
-            new_segment.penup()
-            new_segment.goto(position)              # Createing each segment with it's axis value (starting_position)
-            self.segment.append(new_segment)
+            self.add_segment(position)              # position - inbuild function in turtle to find the position
+           
+    
+    def add_segment(self,position):
+        new_segment = Turtle("square")
+        new_segment.color("white")
+        new_segment.penup()
+        new_segment.goto(position)                  # Createing each segment with it's axis value (starting_position)
+        self.segment.append(new_segment)
+
+    def extend(self):                               # extend the snake 
+        self.add_segment(self.segment[-1].position())
 
     def move(self):
         for seg_num in range (len(self.segment)-1, 0, -1):
@@ -33,7 +41,7 @@ class Snake:
     # To get the snake direction on key press    
     def up(self):
         if self.head.heading() != DOWN:
-            self.head.setheading(UP)                          # snake can't go up when it going down
+            self.head.setheading(UP)                  # snake can't go up when it going down
     
     def down(self):
         if self.head.heading() != UP:
