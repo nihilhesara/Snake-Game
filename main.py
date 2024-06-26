@@ -1,5 +1,6 @@
 from turtle import Turtle, Screen
 from snake import Snake
+from food import Food
 import time
 
 screen = Screen()
@@ -10,6 +11,7 @@ screen.title("Snake game")                  # popup screen title
 segment = []
 
 snake = Snake()                             # Create a snake object
+food = Food()                               # Create a food object
 screen.listen()
 screen.onkey(snake.up, "Up")
 screen.onkey(snake.down, "Down")
