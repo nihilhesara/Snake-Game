@@ -13,7 +13,6 @@ class Snake:
         self.segment = []
         self.create_snake()
         self.head = self.segment[0]                 # To get the snake direction on key press
-        self.extend()
     
     def create_snake(self):
         # Create a 20px heigt and 60px width snake 
@@ -29,6 +28,8 @@ class Snake:
         self.segment.append(new_segment)
 
     def extend(self):                               # extend the snake 
+        tim = Turtle()
+        tim._tracer(False)                          # Remove the animation of the new adding part                               
         self.add_segment(self.segment[-1].position())
 
     def move(self):
