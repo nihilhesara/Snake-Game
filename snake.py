@@ -24,3 +24,15 @@ class Snake:
             new_y = self.segment[seg_num - 1].ycor() 
             self.segment[seg_num].goto(new_x, new_y)         # Give axis values each time it moves it follows the first square
         self.segment[0].forward(MOVE_DISTANCE) 
+    
+    def up(self):
+        self.segment[0].setheading(90)
+    
+    def down(self):
+        self.segment[0].setheading(270)
+
+    def left(self):
+        self.segment[0].setheading(180)
+
+    def right(self):
+        self.segment[0].setheading(0)
