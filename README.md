@@ -26,9 +26,13 @@ To run this project, you need to have Python installed on your system. You can d
    git clone https://github.com/nihilhesara/Snake-Game.git
    
 2. Navigate to the project directory
+
+   ```bash
    cd Snake-Game
 
-3. Running the game
+4. Running the game
+
+   ```bash
    python main.py
 
 How to Play
