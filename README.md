@@ -34,8 +34,10 @@ To run this project, you need to have Python installed on your system. You can d
 
    ```bash
    python main.py
+   
 
 How to Play
+
 
 • Use the arrow keys to control the snake's direction.
 
@@ -46,7 +48,9 @@ How to Play
 • The game ends if the snake collides with the walls or its own body.
 
 
+
 Project structure 
+
 
 • main.py: The main script to run the game.
 
@@ -58,6 +62,7 @@ Project structure
 
 
 Acknowledgements
+
 
 • The Python community for the great resources and support.
 
