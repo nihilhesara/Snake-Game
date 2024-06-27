@@ -38,17 +38,27 @@ To run this project, you need to have Python installed on your system. You can d
 How to Play
 
 • Use the arrow keys to control the snake's direction.
+
 • Eat the food to grow the snake.
+
 • Avoid colliding with the walls or the snake's own body.
-• The game ends if the snake collides with the walls or its own body.  
+
+• The game ends if the snake collides with the walls or its own body.
+
 
 Project structure 
 
 • main.py: The main script to run the game.
+
 • snake.py: Contains the Snake class that manages the snake's behavior.
+
 • food.py: Contains the Food class that manages the food for the snake.
+
 • scoreboard.py: Contains the Scoreboard class that manages the score display.
 
+
 Acknowledgements
+
 • The Python community for the great resources and support.
+
 • The developers of the Turtle graphics package for providing an excellent tool for creating graphical applications.
