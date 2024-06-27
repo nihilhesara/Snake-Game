@@ -36,6 +36,7 @@ To run this project, you need to have Python installed on your system. You can d
    python main.py
    
 
+
 How to Play
 
 
@@ -49,6 +50,7 @@ How to Play
 
 
 
+
 Project structure 
 
 
@@ -59,6 +61,7 @@ Project structure
 • food.py: Contains the Food class that manages the food for the snake.
 
 • scoreboard.py: Contains the Scoreboard class that manages the score display.
+
 
 
 Acknowledgements
