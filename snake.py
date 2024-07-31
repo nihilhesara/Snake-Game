@@ -26,6 +26,13 @@ class Snake:
         new_segment.penup()
         new_segment.goto(position)                  # Createing each segment with it's axis value (starting_position)
         self.segment.append(new_segment)
+    
+    def reset(self):
+        for seg in self.segment:
+            seg.goto(1000,1000)
+        self.segment.clear()
+        self.create_snake()
+        self.head = self.segment[0] 
 
     def extend(self):                               # extend the snake 
         tim = Turtle()

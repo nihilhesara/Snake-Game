@@ -35,13 +35,16 @@ while game_is_on:
     
     # Detect collution with wall (xcor - x cordinent, ycor - y cordinent)
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-        scoreboard.game_over()
-        game_is_on = False
+        scoreboard.reset()
+        snake.reset()
     
     # Detect collution with tail
-    for segments in snake.segment[1:]:
-        if snake.head.distance(segments) < 10:
-            scoreboard.game_over()
-            game_is_on = False
+    for segments in snake.segment:
+        if segments == snake.head:
+            pass
+
+        elif snake.head.distance(segments) < 10:
+            scoreboard.reset()
+            snake.reset()
  
 screen.exitonclick()
